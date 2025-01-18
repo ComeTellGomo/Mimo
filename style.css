@@ -12,7 +12,7 @@ body {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 90vh;
+    height: 100vh;
     cursor: none;
 }
 #move{
@@ -125,4 +125,42 @@ body {
     place-items: end;
     font-weight: 300;
     font-size: 14px;
+  }
+
+  @media (max-width:600px){
+    .flip-card{
+      margin: 20% 5%;
+      width: 270px;
+      height: 380px;
+    }
+    .flip-card-front{
+      height: 430px;
+    }
+    .flip-card-front #frontCardImg{
+      width: 270px;
+      height: 320px;
+    }
+    .flip-card-front #frontText{
+      padding: 30px 5px 0px;
+    }
+    .flip-card-front .age {
+      font-size: 40px;
+    }
+    .flip-card-back {
+      height: 430px;
+      width: 270px;
+    }
+  
+    .flip-card-back #backHeader {
+      margin: 5px 5px 20px 5px
+    }
+  
+
+    .flip-card-back #dateAndTime {
+      font-size: 11px;
+    }
+    .flip-card-back #wishes {
+      margin: 20px;
+      font-size: 25px;
+    }
   }
