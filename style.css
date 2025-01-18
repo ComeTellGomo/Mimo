@@ -129,16 +129,16 @@ body {
 
   @media (max-width:600px){
     .flip-card{
-      margin: 20% 5%;
-      width: 270px;
-      height: 380px;
+      margin: 30% 15%;
+      width: 300px;
+      height: 410px;
     }
     .flip-card-front{
-      height: 430px;
+      height: 460px;
     }
     .flip-card-front #frontCardImg{
-      width: 270px;
-      height: 320px;
+      width: 300px;
+      height: 350px;
     }
     .flip-card-front #frontText{
       padding: 30px 5px 0px;
@@ -147,12 +147,12 @@ body {
       font-size: 40px;
     }
     .flip-card-back {
-      height: 430px;
-      width: 270px;
+      height: 460px;
+      width: 300px;
     }
   
     .flip-card-back #backHeader {
-      margin: 5px 5px 20px 5px
+      margin: 15px 5px 30px 5px
     }
   
 
@@ -160,7 +160,7 @@ body {
       font-size: 11px;
     }
     .flip-card-back #wishes {
-      margin: 20px;
-      font-size: 25px;
+      margin-top: 40px;
+      font-size: 29px;
     }
   }
