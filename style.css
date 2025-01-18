@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background-image: url("images/background.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 90vh;
+    cursor: none;
+}
+#move{
+  color: pink;
+
+  
+   /* border: 2px  ridge rgb(0, 64, 255); */
+  border-radius: 50%;
+  height: 10px;
+  font-size: 30px;
+  aspect-ratio: 1;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  position: fixed;
+  z-index: 0;
+}
+.flip-card {
+    
+    background-color: transparent;
+    width: 300px;
+    height: 410px;
+    border: 1px solid transparent;
+    border-radius: 2rem;
+    margin: 5% 12%;
+    perspective: 1000px; 
+    /* Remove this if you don't want the 3D effect */
+  }
+  
+  /* This container is needed to position the front and back side */
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+  }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+  .flip-card-front {
+    /* text-align: center; */
+    height: 460px;
+    width: max-content;
+    border-radius: 2rem;
+    background-color: #fff;
+    color: black;
+  }
+  .flip-card-front #frontCardImg{
+    background-image: url("images/blue\ card.jpg");
+    background-position: 20%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+    width: 300px;
+    height: 350px;
+  }
+  .flip-card-front #frontText{
+    display: flex;
+    justify-content: space-between;
+    font-family: "Montserrat", serif;
+    padding: 30px 10px 0px;
+  }
+  .flip-card-front .age {
+    font-family: "Montserrat", serif;
+    font-size: 50px;
+    font-style: italic;
+    font-weight: 700;
+    width: 100%;
+  }
+  /* Style the back side */
+  .flip-card-back {
+    font-family: "Montserrat", serif;
+    background-color: #fff;
+    color: #000;
+    height: 460px;
+    width: 300px;
+    border-radius: 2rem;
+    transform: rotateY(180deg);
+  }
+
+  .flip-card-back #backHeader {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 10px 30px 10px;
+    font-weight: 600;
+  }
+
+  .flip-card-back #backHeadText {
+    display: flex;
+    flex-direction: column;
+    place-items: start;
+  }
+  .flip-card-back #dateAndTime {
+    place-items: end;
+    font-weight: 300;
+    font-size: 14px;
+  }
